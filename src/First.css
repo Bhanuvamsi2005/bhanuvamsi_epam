@@ -1,0 +1,339 @@
+
+ 
+ 
+ 
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #4c7ca9;
+    --accent-color: #2294ed;
+    --accent-color-dark: #0f5286;
+}
+
+
+
+
+.news-app {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background: linear-gradient(to bottom, #ffdde1, #f7a8a0, #fde9c9);
+}
+
+.news-app p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+.news-app a {
+    text-decoration: none;
+}
+
+.news-app ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+.news-app .nav {
+    background: linear-gradient(to bottom, #fde9c9, #f7a8a0);
+    box-shadow: 0 0 4px #94c6f1;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width: 120px;
+}
+
+.nav-links ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+    text-decoration: underline;
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.hamburger-menu {
+    background: none; /* Remove background color */
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hide by default */
+  }
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff5e6;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #008cff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+}
+
+.bookmark-btn {
+    background-color: transparent;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: black;
+}
+
+.bookmarked {
+    color: gold;
+    background-color: red;
+}
+
+.bookmarks-section {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #ddd;
+}
+
+.bookmarks-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bookmarks-section h2:hover {
+    text-decoration: underline;
+}
+
+.remove-bookmark-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .main-nav img{
+        display: none;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+
+    .search-bar {
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    .news-input {
+        width: 100%;
+    }
+
+    .cards-container {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .bookmarks-section {
+        padding: 10px;
+    }
+
+    .bookmarks-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .search-button {
+        width: 40%;
+        margin-top: 5px;
+        height: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: block;
+
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-nav {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    
+
+    .nav-links ul {
+        gap: 10px;
+    }
+
+    .search-bar {
+        width: 50%;
+    }
+
+    .cards-container {
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .bookmarks-section {
+        padding: 10px;
+    }
+
+    .bookmarks-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .search-button {
+        width: auto;
+    }
+
+}
+
+
+
+/* Dark Mode */
